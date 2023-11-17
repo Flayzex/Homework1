@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        h1, a {
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .main-page {
+            margin-right: 25px;
+            color:rgb(47, 43, 2);
+        }
+
+        .dictionary-page {
+            margin-right: 25px;
+            color:rgb(45, 13, 120)
+        }
+
+        .add-page {
+            color: rgb(45, 13, 120)
+        }
+
+    </style>
+</head>
+<body>
+    <a href="{% url 'home' %}"><h1 class="main-page">Главная страница</h1></a>
+    <a href="{% url 'words-list' %}"><h2 class="dictionary-page">Словарь</h2></a>
+    <a href="{% url 'add-word' %}"><h2 class="add-page">Добавить слова</h2></a>
+
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table class="words_list">
+    <thead>
+        <tr>
+            <th>Оригинал</th>
+            <th>Перевод</th>
+        </tr>
+    </thead>
+    <tbody class="words_list">
+        {% for word in words %}
+
+        <tr>
+            <td>{{ word.word1 }}</td>
+            <td>{{ word.word2 }}</td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
